@@ -1,0 +1,24 @@
+Rename movie files with better cleaner names.
+
+Usage:
+movierenamer.py [OPTION] FILE...
+    --format=       order of attributes, comma seperated
+                    default, format=title,disk,year,source,codec
+                    available attributes: title,source,codec,year,res
+                    attributes not discovered will be skipped
+    --dry           don't rename files, just show what would happen
+    --debug         turn on debuging mode (does nothing at the moment)
+    -h
+    --help          show help
+    --imdb          attempt to use IMDB to help
+    --spaces        use spaces instead of dots for the final name
+    --underscores   use underscores instead of dots for the final name
+
+Example:
+    movierenamer.py --format=title,year name_of_some_movie.2011.brrip.720p.mkv
+renames the movie to: name.of.some.movie.2011.mkv
+
+TODO:
+actually use IMDB to get more useful information
+formatting more consistant (eg. 'text-text' vs 'text - text', currently no desision made)
+remove release group names
